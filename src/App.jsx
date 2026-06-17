@@ -1,6 +1,6 @@
-import MethodOne from './Capco/MethodOne';
-import MethodTwo from './Capco/MethodTwo';
-import MethodThree from './Capco/MethodThree';
+import MethodOne from './capco/MethodOne';
+import MethodTwo from './capco/MethodTwo';
+import MethodThree from './capco/MethodThree';
 import '../src/css/App.css';
 
 export default function App() {
