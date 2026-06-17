@@ -1,27 +1,13 @@
 import React, { useEffect, useState } from "react";
 import MethodThreeHooks from "./MethodThreeHooks";
+import Container from "./Container";
 
 function MethodThree() {
-  const { search, setSearch, posts } = MethodThreeHooks();
+    const { search, setSearch, posts } = MethodThreeHooks();
 
-  return (
-    <div>
-      <h2>Posts Method 3</h2>
-
-      <input
-        type="text"
-        placeholder="Search title..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
+    return (
+        <Container count="3" search={search} setSearch={setSearch} posts={posts} filteredPosts={posts} method="Debounce Method" />
+    );
 }
 
 export default MethodThree;

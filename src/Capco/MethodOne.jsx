@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MethodOneHooks from "./MethodOneHooks";
+import Container from "./Container";
 
 const MethodOne = () => {
   const { posts, loading, error } = MethodOneHooks();
@@ -13,22 +14,7 @@ const MethodOne = () => {
   if (error) return <h3>{error}</h3>;
 
   return (
-    <div>
-      <h2>Posts Method 1</h2>
-
-      <input
-        type="text"
-        placeholder="Search title..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
-      <ul>
-        {filteredPosts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
-    </div>
+    <Container count="1" search={search} setSearch={setSearch} posts={posts} filteredPosts={filteredPosts} method="Simple Search Method" />
   );
 };
 
