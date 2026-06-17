@@ -14,7 +14,7 @@ const MethodOne = () => {
 
   return (
     <div>
-      <h2>Posts (Fetch API)</h2>
+      <h2>Posts Method 1</h2>
 
       <input
         type="text"
